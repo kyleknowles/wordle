@@ -9,5 +9,10 @@ guesses_array = guesses_df['word'].to_numpy()
 
 valid_freq_df = df.merge(guesses_df, how='inner',left_on='word', right_on='word')
 
+# array of valid words that need to be added to df 
+lost_words = [word for word in guesses_array if word not in word_array]
+
+
+
 valid_freq_df = valid_freq_df[['word']]
 valid_freq_df.to_csv('wordle/valid_freq.csv', index=False)
