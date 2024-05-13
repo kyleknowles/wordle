@@ -28,23 +28,21 @@ def wordle_solver(five_letter_array):
             ## Have to add cases where there are two of the same letter
             
             if (word_data[data_letter] == "B"):
-                ##curr_letter = word[data_letter]
-                guess_count = word.count(word[data_letter])
-                ##answer_count = word.count(((word_data[data_letter] == "G") | (word_data[data_letter] == "Y")) & (word[data_letter] == curr_letter)) 
-                if (guess_count == 1):
-                    # not in word at all
-                    five_letter_array = [five_word for five_word in five_letter_array if word[data_letter] not in five_word]
-                else:
-                    # not in position
-                    five_letter_array = [five_word for five_word in five_letter_array if word[data_letter] != five_word[data_letter]]
-                    ##five_letter_array = [five_word for five_word in five_letter_array if answer_count == five_word[data_letter]]
-                    #needs more cases
+                guess_count = 0
+                for letter in range(5):
+                    if ((word_data[letter] == "G") | (word_data[letter] == "Y")) & (word[data_letter] == word[letter]):
+                        guess_count += 1
+
+    
+                five_letter_array = [five_word for five_word in five_letter_array if word[data_letter] != five_word[data_letter]]
+                five_letter_array = [five_word for five_word in five_letter_array if five_word.count(word[data_letter]) == guess_count]
+               
 
             elif (word_data[data_letter] == "G"):
                 five_letter_array = [five_word for five_word in five_letter_array if word[data_letter] == five_word[data_letter]]
                 
             elif (word_data[data_letter] == "Y"):
-                # combining these would probably work
+
                 five_letter_array = [five_word for five_word in five_letter_array if ((word[data_letter] in five_word) & (word[data_letter] != five_word[data_letter]))]
                 
                 
