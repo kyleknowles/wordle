@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('valid_freq.csv')
+df = pd.read_csv('wordle/valid_freq.csv')
 five_letter_array = df['word'].to_numpy()
 
 
