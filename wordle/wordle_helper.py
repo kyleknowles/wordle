@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 
@@ -33,8 +32,6 @@ def wordle_solver(five_letter_array):
 
             word_data = input("And what information did that give you?: ").upper()
         
-        
-
         # If you win
         if (word_data == "GGGGG"):
             print("Congratulations, you got it!!")
@@ -56,10 +53,15 @@ def wordle_solver(five_letter_array):
                 five_letter_array = [five_word for five_word in five_letter_array if word[data_letter] == five_word[data_letter]]
                 
             elif (word_data[data_letter] == "Y"):
-
+                guess_count = 0
+                for letter in range(5):
+                    if ((word_data[letter] == "G") | (word_data[letter] == "Y")) & (word[data_letter] == word[letter]):
+                        guess_count += 1
                 five_letter_array = [five_word for five_word in five_letter_array if ((word[data_letter] in five_word) & (word[data_letter] != five_word[data_letter]))]
+                five_letter_array = [five_word for five_word in five_letter_array if five_word.count(word[data_letter]) >= guess_count]
                 
-                
+        
+        
         print("Possible Words:")
         word_length = 20
         if (len(five_letter_array) < 20):
