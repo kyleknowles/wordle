@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Animal-le</title>
+   <h1><center>WELCOME TO ANIMAL-LE</center></h1>
+    <style>
+        h1 {
+            font-size: 60px;
+        }
+
+        .infoBox {
+            height: 200px;
+            width: 25%;
+            background-color: grey;
+            margin-right: 5px;
+            margin-left: 5px;
+            transition: all 0.5s ease;
+            border: 1px solid black;
+            border-radius: 10px; 
+
+            display: flex;
+            justify-content: center; 
+            text-align: center;
+            /* align-items: center;     /* Centers vertically */
+
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .infoBox:hover {
+            background-color: lightgray;
+        }
+
+        .boxContainer {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            /* border: 4px solid purple; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <label for="currGuess">Choose an animal:</label>
+    <input type="text" id="currGuess" name="currGuess" placeholder="Enter">
+    <button onclick="checkAnswer()">Enter</button>
+    <script>
+
+    var tiger = {
+        class: "They are a mammal",
+        weight: "Adult males weigh 200 - 680 lbs, while adult females weigh 140 - 370 pounds.",
+        geography: "They are found in South and Southeast Asia, China, and Eastern Russia.",
+        biome: "They live in temperate, tropical, and evergreen forests, as well as mangrove swamps, grasslands, and savannas.",
+        color: "They are black and orange.",
+        lifespan: "They live for 10-15 years in the wild",
+        diet: "They are carnivores",
+        dimorphism: "None, except for males are bigger.",
+        speciesCount: "There are currently 6 species.",
+        legsNum: "They have 4 legs.",
+        funFact: "No two of this animal have the same stripes."
+    }
+
+
+
+    var firstGuess = 0;
+    var hints = [];
+    hints.push(["class", "What Class of Animal is it?"]);
+    hints.push(["weight", "How Much Does an Adult Weigh?"]);
+    hints.push(["geography", "Where Does it Live Geographially?"]);
+    hints.push(["biome", "What Biome Does it Live in?"]);
+    hints.push(["color", "What Color is it?"]);
+    hints.push(["lifespan", "What is their Average Lifespan"]);
+    hints.push(["diet", "What is Their diet"]);
+    hints.push(["dimorphism", "Are They Sexually Dimorphic?"]);
+    hints.push(["speciesCount", "How Many Species are There?"]);
+    hints.push(["legsNum", "How Many Legs Does it Have?"]);
+    hints.push(["funFact", "Give Me a Fun Fact About This Animal"]);
+    hints = hints.reverse();
+
+    for (let hintNum = 0; hintNum < hints.length; hintNum++) {
+        hints[hintNum][2] = tiger[hints[hintNum][0]];
+    }
+
+
+    function checkAnswer() {
+        var currSolution = "Tiger";
+        var answer = (document.getElementById("currGuess")).value;
+
+        if (answer.toUpperCase() == currSolution.toUpperCase()) {
+            alert("You Win!!!!");
+        } else {
+            if (firstGuess == 0) {
+                firstGuess = 1;
+                var pickOption = document.createElement("p");
+                pickOption.innerHTML = "Pick one the the following options:";
+                document.body.append(pickOption);
+
+                var allBox = document.createElement("div");
+                allBox.classList.add("boxContainer");
+
+                for (var box = 1; box <= 4; box++) {
+                    allBox = createBox(allBox);
+                }   
+                document.body.appendChild(allBox);
+            }
+        }
+        
+    }
+
+    function createBox(allBox) {
+        
+        var newBox = document.createElement("button");
+        newBox.classList.add("infoBox");
+        var questions = hints.pop();
+        newBox.id = questions[0];
+        newBox.innerHTML = questions[1];
+
+        
+        newBox.onclick = function() {
+            this.remove();
+           
+            var newInfo = document.createElement("p");
+            newInfo.innerHTML = questions[2];
+            document.body.appendChild(newInfo);
+
+            if (hints.length > 0) {
+                createBox(allBox);  
+            }
+        }
+        
+        allBox.appendChild(newBox);
+        return allBox;
+        
+    }
+
+
+    </script>
+
+
+</body>
