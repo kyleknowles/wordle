@@ -10,6 +10,7 @@ valid_solutions = df_valid_solutions['word'].to_numpy()
 df_valid_guesses = pd.read_csv('wordle/valid_guesses.csv')
 valid_guesses = df_valid_guesses['word'].to_numpy()
 
+
 def wordle_solver(five_letter_array):
     print("Welcome to Wordle Helper")
     for guess in range(5):
@@ -38,7 +39,6 @@ def wordle_solver(five_letter_array):
             return(0)
         
         for data_letter in range(5):
-            ## Have to add cases where there are two of the same letter
             
             if (word_data[data_letter] == "B"):
                 guess_count = 0
