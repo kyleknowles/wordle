@@ -19,12 +19,10 @@
             transition: all 0.5s ease;
             border: 1px solid black;
             border-radius: 10px; 
-
             display: flex;
             justify-content: center; 
-            /* text-align: center;*/
+            /* text-align: center; */
             /* align-items: center;     /* Centers vertically */
-
             padding: 10px;
             box-sizing: border-box;
         }
@@ -46,7 +44,6 @@
         .answer {
             font-size: 20px;
             text-align: center;
-
         }
     </style>
 </head>
@@ -59,8 +56,10 @@
     </div>
     <script>
 
+    var animals = [];
+
     var tiger = {
-        class: "They are a mammal",
+        class: "They are mammals",
         weight: "Adult males weigh 200 - 680 lbs, while adult females weigh 140 - 370 pounds.",
         geography: "They are found in South and Southeast Asia, China, and Eastern Russia.",
         biome: "They live in temperate, tropical, and evergreen forests, as well as mangrove swamps, grasslands, and savannas.",
@@ -72,6 +71,1316 @@
         legsNum: "They have 4 legs.",
         funFact: "No two of this animal have the same stripes."
     }
+    animals.push(["Tiger", tiger]);
+   
+    var emu = {
+        class: "They are birds.",
+        weight: "Adults weigh around 110-132 pounds.",
+        geography: "They are found only in Australia.",
+        biome: "They live in eucalyptus forests, woodlands, heath lands, desert shrub lands, and sand plains.",
+        color: "They are brown.",
+        lifespan: "They live for 5-10 years in the wild",
+        diet: "They are omnivores",
+        dimorphism: "Females are ~10% larger and have a air sack on their neck",
+        speciesCount: "1 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "Australia lost a war to these birds."
+    }
+    animals.push(["Emu", emu]);
+    
+    var elephant = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 5,000-14,000 pounds depending on the species.",
+        geography: "They are found in Africa and Asia.",
+        biome: "They live in savannas, forests, deserts, and marshes.",
+        color: "They are grey.",
+        lifespan: "They live for 60-70 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger and have bigger tusks than females.",
+        speciesCount: "3 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have the largest brain of any land animal."
+    }
+    animals.push(["Elephant", elephant]);
+
+    var penguin = {
+        class: "They are birds.",
+        weight: "Adults weigh between 2-88 pounds depending on the species.",
+        geography: "They are found in the Southern Hemisphere, especially in Antarctica.",
+        biome: "They live in coastal regions and islands.",
+        color: "They are black and white.",
+        lifespan: "They live for 15-20 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females look similar, though males are slightly larger.",
+        speciesCount: "18 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They can't fly, but they are excellent swimmers."
+    }
+    animals.push(["Penguin", penguin]);
+
+    var kangaroo = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 50-200 pounds depending on the species.",
+        geography: "They are found in Australia.",
+        biome: "They live in grasslands, savannas, and forests.",
+        color: "They are typically brown or grey.",
+        lifespan: "They live for 6-8 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger and more muscular than females.",
+        speciesCount: "4 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They can't move backwards."
+    }
+    animals.push(["Kangaroo", kangaroo]);
+
+    var dolphin = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 330-1,400 pounds depending on the species.",
+        geography: "They are found in oceans and some rivers worldwide.",
+        biome: "They live in marine and freshwater environments.",
+        color: "They are typically grey with a lighter underside.",
+        lifespan: "They live for 20-45 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are typically larger than females.",
+        speciesCount: "Approximately 90 species are currently recognized.",
+        legsNum: "They have 2 flippers.",
+        funFact: "They are known for their intelligence and complex social structures."
+    }
+    animals.push(["Dolphin", dolphin]);
+
+    var lion = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 330-550 pounds.",
+        geography: "They are found in Africa and a small population in India.",
+        biome: "They live in savannas, grasslands, and woodlands.",
+        color: "They are tawny yellow.",
+        lifespan: "They live for 10-14 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males have a mane, and they are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are the only cats that live in groups called prides."
+    }
+    animals.push(["Lion", lion]);
+
+    var gorilla = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 220-440 pounds.",
+        geography: "They are found in central Africa.",
+        biome: "They live in tropical and subtropical forests.",
+        color: "They are mostly black or dark brown.",
+        lifespan: "They live for 35-40 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are significantly larger and have a silverback.",
+        speciesCount: "2 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They share about 98% of their DNA with humans."
+    }
+    animals.push(["Gorilla", gorilla]);
+
+    var crocodile = {
+        class: "They are reptiles.",
+        weight: "Adults weigh between 400-2,200 pounds depending on the species.",
+        geography: "They are found in Africa, Asia, the Americas, and Australia.",
+        biome: "They live in rivers, lakes, wetlands, and sometimes brackish water.",
+        color: "They are typically grey or greenish-brown.",
+        lifespan: "They live for 35-75 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "13 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have the strongest bite of any animal in the world."
+    }
+    animals.push(["Crocodile", crocodile]);
+
+    var parrot = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.1-3.5 pounds depending on the species.",
+        geography: "They are found in tropical and subtropical regions worldwide.",
+        biome: "They live in forests, woodlands, savannas, and grasslands.",
+        color: "They are brightly colored, often with green, red, yellow, and blue feathers.",
+        lifespan: "They live for 20-80 years in captivity.",
+        diet: "They are omnivores.",
+        dimorphism: "Males and females look similar, though there can be size differences.",
+        speciesCount: "Approximately 393 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are known for their ability to mimic human speech."
+    }
+    animals.push(["Parrot", parrot]);
+
+    var koala = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 9-33 pounds.",
+        geography: "They are found in eastern and southern Australia.",
+        biome: "They live in eucalyptus forests and woodlands.",
+        color: "They are grey with a white underside.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger and have a broader face.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They sleep up to 18-22 hours a day."
+    }
+    animals.push(["Koala", koala]);
+
+    var cheetah = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 77-143 pounds.",
+        geography: "They are found in Africa and parts of Iran.",
+        biome: "They live in savannas, grasslands, and dry forests.",
+        color: "They are tan with black spots.",
+        lifespan: "They live for 10-12 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are slightly larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are the fastest land animals, capable of running up to 70 mph."
+    }
+    animals.push(["Cheetah", cheetah]);
+
+    var panda = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 220-330 pounds.",
+        geography: "They are found in central China.",
+        biome: "They live in temperate broadleaf and mixed forests.",
+        color: "They are black and white.",
+        lifespan: "They live for 20 years in the wild.",
+        diet: "They are omnivores, primarily eating bamboo.",
+        dimorphism: "Males are slightly larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have a special bone in their wrist that acts like a thumb."
+    }
+    animals.push(["Panda", panda]);
+
+    var zebra = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 485-990 pounds depending on the species.",
+        geography: "They are found in Africa.",
+        biome: "They live in savannas, grasslands, and open woodlands.",
+        color: "They are black with white stripes.",
+        lifespan: "They live for 20-25 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in size, but males are slightly heavier.",
+        speciesCount: "3 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "Their stripe patterns are unique to each individual."
+    }
+    animals.push(["Zebra", zebra]);
+
+    var octopus = {
+        class: "They are cephalopods.",
+        weight: "Adults weigh between 2-110 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments including coral reefs, pelagic waters, and the ocean floor.",
+        color: "They can change color to blend into their surroundings.",
+        lifespan: "They live for 1-5 years.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Around 300 species are currently recognized.",
+        legsNum: "They have 8 legs.",
+        funFact: "They are known for their intelligence and ability to escape enclosures."
+    }
+    animals.push(["Octopus", octopus]);
+
+    var rabbit = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 2-11 pounds depending on the breed.",
+        geography: "They are found in various parts of the world, particularly in Europe, North America, and parts of Asia.",
+        biome: "They live in meadows, woods, forests, grasslands, deserts, and wetlands.",
+        color: "They come in various colors including brown, grey, white, and black.",
+        lifespan: "They live for 1-2 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in size, but females are slightly larger.",
+        speciesCount: "29 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have nearly 360-degree vision, allowing them to detect predators from almost all directions."
+    }
+    animals.push(["Rabbit", rabbit]);
+
+    var owl = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.2-9.3 pounds depending on the species.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in forests, deserts, and grasslands.",
+        color: "They come in various colors including brown, white, gray, and black.",
+        lifespan: "They live for 5-12 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are typically larger than males.",
+        speciesCount: "Approximately 200 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They can rotate their heads up to 270 degrees."
+    }
+    animals.push(["Owl", owl]);
+
+    var hawk = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.5-4 pounds depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in forests, grasslands, and deserts.",
+        color: "They come in various colors including brown, gray, and white.",
+        lifespan: "They live for 10-20 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are generally larger than males.",
+        speciesCount: "Over 200 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They have excellent vision, allowing them to spot prey from great distances."
+    }
+    animals.push(["Hawk", hawk]);
+
+    var eagle = {
+        class: "They are birds.",
+        weight: "Adults weigh between 6.6-14 pounds depending on the species.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in forests, mountains, and near water bodies.",
+        color: "They are typically brown with a white head and tail in some species.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are larger than males.",
+        speciesCount: "Approximately 60 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They build the largest nests of any bird species."
+    }
+    animals.push(["Eagle", eagle]);
+
+    var falcon = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.7-3.3 pounds depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in various habitats including forests, grasslands, and deserts.",
+        color: "They come in various colors including gray, white, and brown.",
+        lifespan: "They live for 12-20 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are larger than males.",
+        speciesCount: "Around 40 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are the fastest animals in the world, capable of reaching speeds over 240 mph."
+    }
+    animals.push(["Falcon", falcon]);
+
+    var bear = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 200-1,500 pounds depending on the species.",
+        geography: "They are found in North America, South America, Europe, and Asia.",
+        biome: "They live in forests, mountains, tundra, and coastal areas.",
+        color: "They come in various colors including brown, black, and white.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "8 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They can run up to 40 mph despite their size."
+    }
+    animals.push(["Bear", bear]);
+
+    var deer = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 70-700 pounds depending on the species.",
+        geography: "They are found in North America, South America, Europe, Asia, and northern Africa.",
+        biome: "They live in forests, grasslands, and wetlands.",
+        color: "They are typically brown or gray.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males typically have antlers, which they shed and regrow each year.",
+        speciesCount: "Around 90 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are excellent swimmers."
+    }
+    animals.push(["Deer", deer]);
+
+    var seal = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 100-8,800 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in marine environments including coastal areas, ice floes, and open ocean.",
+        color: "They are typically gray, brown, or black.",
+        lifespan: "They live for 25-30 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are generally larger than females.",
+        speciesCount: "Around 33 species are currently recognized.",
+        legsNum: "They have 4 flippers.",
+        funFact: "They can hold their breath for up to two hours underwater."
+    }
+    animals.push(["Seal", seal]);
+
+    var walrus = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1,764-3,748 pounds.",
+        geography: "They are found in the Arctic Ocean and subarctic seas.",
+        biome: "They live in marine environments including coastal areas and ice floes.",
+        color: "They are typically brown or gray.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger and have longer tusks than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 flippers.",
+        funFact: "They use their tusks to help them climb out of the water and onto ice."
+    }
+    animals.push(["Walrus", walrus]);
+
+    var whale = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 6,600-440,000 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments including open ocean and coastal areas.",
+        color: "They are typically gray, black, or blue.",
+        lifespan: "They live for 30-90 years in the wild.",
+        diet: "They are carnivores or filter feeders depending on the species.",
+        dimorphism: "Females are generally larger than males.",
+        speciesCount: "Around 90 species are currently recognized.",
+        legsNum: "They have 2 flippers.",
+        funFact: "They are known for their complex vocalizations, often referred to as songs."
+    }
+    animals.push(["Whale", whale]);
+
+    var shark = {
+        class: "They are fish.",
+        weight: "Adults weigh between 7-11,000 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments including coastal areas, open ocean, and deep sea.",
+        color: "They are typically gray, blue, or brown.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are generally larger than males.",
+        speciesCount: "Around 500 species are currently recognized.",
+        legsNum: "They have no legs but have fins.",
+        funFact: "They have a special sensory system called the ampullae of Lorenzini, which detects electric fields generated by other animals."
+    }
+    animals.push(["Shark", shark]);
+
+    var yak = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 660-2,200 pounds.",
+        geography: "They are found in the Himalayas and Tibetan Plateau.",
+        biome: "They live in alpine meadows and grasslands.",
+        color: "They are typically black or brown.",
+        lifespan: "They live for 20-25 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are significantly larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are adapted to high altitudes and can survive at elevations of up to 20,000 feet."
+    }
+    animals.push(["Yak", yak]);
+
+    var frog = {
+        class: "They are amphibians.",
+        weight: "Adults weigh between 0.1-3 pounds depending on the species.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in various environments including forests, grasslands, and wetlands.",
+        color: "They come in various colors including green, brown, and yellow.",
+        lifespan: "They live for 10-12 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are generally smaller and have vocal sacs.",
+        speciesCount: "Over 6,000 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have a unique ability to jump long distances."
+    }
+    animals.push(["Frog", frog]);
+
+    var snake = {
+        class: "They are reptiles.",
+        weight: "Adults weigh between 0.2-500 pounds depending on the species.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in various environments including forests, deserts, and wetlands.",
+        color: "They come in various colors including green, brown, and black.",
+        lifespan: "They live for 9-20 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females are similar in size, though females are often larger.",
+        speciesCount: "Around 3,000 species are currently recognized.",
+        legsNum: "They have no legs.",
+        funFact: "They use their tongues to smell their environment."
+    }
+    animals.push(["Snake", snake]);
+
+    var fly = {
+        class: "They are insects.",
+        weight: "Adults weigh less than 0.0002 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including urban areas, forests, and grasslands.",
+        color: "They are typically black or gray.",
+        lifespan: "They live for around 30 days.",
+        diet: "They are omnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Over 120,000 species are currently recognized.",
+        legsNum: "They have 6 legs.",
+        funFact: "They have compound eyes that allow them to see in many directions at once."
+    }
+    animals.push(["Fly", fly]);
+
+    var wolf = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 70-130 pounds.",
+        geography: "They are found in North America, Europe, Asia, and North Africa.",
+        biome: "They live in forests, grasslands, and tundra.",
+        color: "They are typically gray, but can also be white, black, or brown.",
+        lifespan: "They live for 6-8 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They live and hunt in packs with complex social structures."
+    }
+    animals.push(["Wolf", wolf]);
+
+    var coyote = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 15-46 pounds.",
+        geography: "They are found in North and Central America.",
+        biome: "They live in forests, grasslands, deserts, and urban areas.",
+        color: "They are typically grayish-brown with a white underbelly.",
+        lifespan: "They live for 10-14 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are slightly larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are known for their adaptability and ability to live in various environments."
+    }
+    animals.push(["Coyote", coyote]);
+
+    var seaHorse = {
+        class: "They are fish.",
+        weight: "Adults weigh between 0.035-0.25 ounces depending on the species.",
+        geography: "They are found in shallow tropical and temperate waters worldwide.",
+        biome: "They live in seagrass beds, coral reefs, and mangroves.",
+        color: "They come in various colors including yellow, orange, and brown.",
+        lifespan: "They live for 1-5 years.",
+        diet: "They are carnivores.",
+        dimorphism: "Males have a brood pouch for carrying eggs.",
+        speciesCount: "Around 46 species are currently recognized.",
+        legsNum: "They have no legs but have a prehensile tail.",
+        funFact: "They are unique in that males carry and give birth to the young."
+    }
+    animals.push(["Sea Horse", seaHorse]);
+
+    var horse = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 840-2,200 pounds depending on the breed.",
+        geography: "They are found worldwide.",
+        biome: "They live in grasslands, savannas, and open woodlands.",
+        color: "They come in various colors including brown, black, white, and gray.",
+        lifespan: "They live for 25-30 years.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have a special locking mechanism in their legs that allows them to sleep standing up."
+    }
+    animals.push(["Horse", horse]);
+
+    var monkey = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 0.5-77 pounds depending on the species.",
+        geography: "They are found in Central and South America, Africa, and Asia.",
+        biome: "They live in tropical forests, savannas, and mountains.",
+        color: "They come in various colors including brown, gray, and black.",
+        lifespan: "They live for 10-50 years depending on the species.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are generally larger than females.",
+        speciesCount: "Around 260 species are currently recognized.",
+        legsNum: "They have 2 legs and 2 arms.",
+        funFact: "They use tools to obtain food and have complex social behaviors."
+    }
+    animals.push(["Monkey", monkey]);
+
+    var chimpanzee = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 70-130 pounds.",
+        geography: "They are found in West and Central Africa.",
+        biome: "They live in tropical rainforests and savannas.",
+        color: "They are typically black with a bare face.",
+        lifespan: "They live for 33-40 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger and more robust than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 2 legs and 2 arms.",
+        funFact: "They share about 98% of their DNA with humans."
+    }
+    animals.push(["Chimpanzee", chimpanzee]);
+
+    var goat = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 45-310 pounds depending on the breed.",
+        geography: "They are found worldwide.",
+        biome: "They live in mountains, grasslands, and deserts.",
+        color: "They come in various colors including white, brown, black, and gray.",
+        lifespan: "They live for 10-18 years.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger and have longer horns than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are known for their climbing ability and can scale steep, rocky terrain."
+    }
+    animals.push(["Goat", goat]);
+
+    var bee = {
+        class: "They are insects.",
+        weight: "Adults weigh about 0.00025 pounds.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in forests, meadows, and agricultural areas.",
+        color: "They are typically black and yellow.",
+        lifespan: "They live for 1-6 months depending on the species.",
+        diet: "They are herbivores, primarily feeding on nectar and pollen.",
+        dimorphism: "Females are workers, and males are drones. The queen is larger than both.",
+        speciesCount: "Around 20,000 species are currently recognized.",
+        legsNum: "They have 6 legs.",
+        funFact: "They play a crucial role in pollinating plants and crops."
+    }
+    animals.push(["Bee", bee]);
+
+    var spider = {
+        class: "They are arachnids.",
+        weight: "Adults weigh between 0.0002-0.2 pounds depending on the species.",
+        geography: "They are found worldwide except Antarctica.",
+        biome: "They live in various environments including forests, deserts, and urban areas.",
+        color: "They come in various colors including brown, black, and red.",
+        lifespan: "They live for 1-2 years.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are generally larger than males.",
+        speciesCount: "Around 48,000 species are currently recognized.",
+        legsNum: "They have 8 legs.",
+        funFact: "They produce silk, which is used to make webs, catch prey, and create shelters."
+    }
+    animals.push(["Spider", spider]);
+
+    var crab = {
+        class: "They are crustaceans.",
+        weight: "Adults weigh between 0.2-10 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in marine environments including coastal areas, deep sea, and estuaries.",
+        color: "They come in various colors including red, blue, and brown.",
+        lifespan: "They live for 3-7 years.",
+        diet: "They are omnivores.",
+        dimorphism: "Males typically have larger claws than females.",
+        speciesCount: "Around 6,800 species are currently recognized.",
+        legsNum: "They have 10 legs.",
+        funFact: "They can regenerate lost limbs."
+    }
+    animals.push(["Crab", crab]);
+
+    var lobster = {
+        class: "They are crustaceans.",
+        weight: "Adults weigh between 1-44 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in marine environments including coastal areas and deep sea.",
+        color: "They are typically dark blue, green, or brown.",
+        lifespan: "They live for 20-50 years.",
+        diet: "They are omnivores.",
+        dimorphism: "Males have larger claws than females.",
+        speciesCount: "Around 30 species are currently recognized.",
+        legsNum: "They have 10 legs.",
+        funFact: "They grow throughout their lives and can live to be very old."
+    }
+    animals.push(["Lobster", lobster]);
+
+    var squid = {
+        class: "They are cephalopods.",
+        weight: "Adults weigh between 0.2-1,100 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments including open ocean and coastal areas.",
+        color: "They can change color to blend into their surroundings.",
+        lifespan: "They live for 1-3 years.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Around 300 species are currently recognized.",
+        legsNum: "They have 10 arms and tentacles.",
+        funFact: "They can eject ink to escape from predators."
+    }
+    animals.push(["Squid", squid]);
+
+    var squirrel = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 0.5-3 pounds depending on the species.",
+        geography: "They are found in North America, Europe, Asia, and Africa.",
+        biome: "They live in forests, grasslands, and urban areas.",
+        color: "They come in various colors including gray, brown, and red.",
+        lifespan: "They live for 6-12 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Around 285 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have excellent memory and can remember the locations of thousands of buried nuts."
+    }
+    animals.push(["Squirrel", squirrel]);
+
+    var starfish = {
+        class: "They are echinoderms.",
+        weight: "Adults weigh between 0.1-11 pounds depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in marine environments including coral reefs, rocky shores, and deep sea.",
+        color: "They come in various colors including red, orange, and blue.",
+        lifespan: "They live for 10-35 years.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Around 2,000 species are currently recognized.",
+        legsNum: "They have 5 or more arms.",
+        funFact: "They can regenerate lost arms."
+    }
+    animals.push(["Starfish", starfish]);
+
+    var platypus = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1.5-5.3 pounds.",
+        geography: "They are found in eastern Australia and Tasmania.",
+        biome: "They live in freshwater rivers and lakes.",
+        color: "They are typically brown.",
+        lifespan: "They live for 12-17 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are one of the few mammals that lay eggs."
+    }
+    animals.push(["Platypus", platypus]);
+
+    var giraffe = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1,750-2,800 pounds.",
+        geography: "They are found in Africa.",
+        biome: "They live in savannas and open woodlands.",
+        color: "They are typically tan with brown patches.",
+        lifespan: "They live for 25 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger and have thicker necks than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have the longest neck of any animal, which can be up to 6 feet long."
+    }
+    animals.push(["Giraffe", giraffe]);
+
+    var hippopotamus = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 2,870-3,970 pounds.",
+        geography: "They are found in sub-Saharan Africa.",
+        biome: "They live in rivers, lakes, and swamps.",
+        color: "They are typically gray or brown.",
+        lifespan: "They live for 40-50 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "2 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They can hold their breath underwater for up to 5 minutes."
+    }
+    animals.push(["Hippopotamus", hippopotamus]);
+
+    var mouse = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 0.5-1 ounce.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including forests, grasslands, and urban areas.",
+        color: "They are typically gray or brown.",
+        lifespan: "They live for 1-2 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "Over 30 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are known for their agility and ability to squeeze through small spaces."
+    }
+    animals.push(["Mouse", mouse]);
+
+    var hyena = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 90-190 pounds depending on the species.",
+        geography: "They are found in Africa and parts of Asia.",
+        biome: "They live in savannas, grasslands, and forests.",
+        color: "They are typically brown or gray with black spots or stripes.",
+        lifespan: "They live for 12-25 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Females are larger than males.",
+        speciesCount: "4 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have extremely powerful jaws capable of crushing bones."
+    }
+    animals.push(["Hyena", hyena]);
+
+    var jaguar = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 100-250 pounds.",
+        geography: "They are found in Central and South America.",
+        biome: "They live in rainforests, savannas, and wetlands.",
+        color: "They are typically golden with black spots.",
+        lifespan: "They live for 12-15 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have the strongest bite force of any big cat."
+    }
+    animals.push(["Jaguar", jaguar]);
+
+    var ostrich = {
+        class: "They are birds.",
+        weight: "Adults weigh between 140-320 pounds.",
+        geography: "They are found in Africa.",
+        biome: "They live in savannas, deserts, and open woodlands.",
+        color: "They are typically black and white.",
+        lifespan: "They live for 40-45 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger and have black and white plumage, while females are brown.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are the largest and heaviest birds in the world and can run up to 45 mph."
+    }
+    animals.push(["Ostrich", ostrich]);
+
+    var moose = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1,200-1,500 pounds.",
+        geography: "They are found in North America, Europe, and Asia.",
+        biome: "They live in forests, tundra, and wetlands.",
+        color: "They are typically dark brown.",
+        lifespan: "They live for 15-20 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males have large antlers, which they shed annually.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are excellent swimmers and can dive up to 20 feet underwater."
+    }
+    animals.push(["Moose", moose]);
+
+    var rhinoceros = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1,760-5,100 pounds depending on the species.",
+        geography: "They are found in Africa and Asia.",
+        biome: "They live in savannas, grasslands, and forests.",
+        color: "They are typically gray or brown.",
+        lifespan: "They live for 35-50 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "5 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have poor eyesight but an excellent sense of smell."
+    }
+    animals.push(["Rhinoceros", rhinoceros]);
+
+    var porcupine = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 12-35 pounds.",
+        geography: "They are found in North and South America, Africa, and Asia.",
+        biome: "They live in forests, deserts, and grasslands.",
+        color: "They are typically brown or gray with quills.",
+        lifespan: "They live for 5-7 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "29 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have up to 30,000 quills that can detach and embed in predators."
+    }
+    animals.push(["Porcupine", porcupine]);
+
+    var cow = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 1,100-2,400 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including grasslands and farms.",
+        color: "They are typically black, white, brown, or a combination.",
+        lifespan: "They live for 18-22 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females and have horns.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have a specialized stomach with four compartments for digesting tough plant material."
+    }
+    animals.push(["Cow", cow]);
+
+    var pig = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 300-700 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including forests, grasslands, and farms.",
+        color: "They are typically pink, black, or brown.",
+        lifespan: "They live for 15-20 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are highly intelligent and can learn complex tasks."
+    }
+    animals.push(["Pig", pig]);
+
+    var sheep = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 100-350 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including grasslands and mountains.",
+        color: "They are typically white, black, or brown.",
+        lifespan: "They live for 10-12 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females and have horns.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have excellent memories and can recognize faces."
+    }
+    animals.push(["Sheep", sheep]);
+
+    var chicken = {
+        class: "They are birds.",
+        weight: "Adults weigh between 5-10 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including forests and farms.",
+        color: "They are typically white, brown, or black.",
+        lifespan: "They live for 5-10 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger than females and have more colorful plumage.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They can remember over 100 different faces of people or animals."
+    }
+    animals.push(["Chicken", chicken]);
+
+    var camel = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 880-1,320 pounds.",
+        geography: "They are found in the Middle East, Africa, and Asia.",
+        biome: "They live in deserts and arid regions.",
+        color: "They are typically brown or tan.",
+        lifespan: "They live for 40-50 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "2 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They can go for weeks without water and can drink up to 40 gallons in one go."
+    }
+    animals.push(["Camel", camel]);
+
+    var donkey = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 400-570 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including deserts, grasslands, and farms.",
+        color: "They are typically gray, brown, or black.",
+        lifespan: "They live for 25-30 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have a loud bray that can be heard for over two miles."
+    }
+    animals.push(["Donkey", donkey]);
+
+    var fox = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 6-24 pounds depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in forests, grasslands, mountains, and deserts.",
+        color: "They are typically red, gray, or white.",
+        lifespan: "They live for 3-4 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are slightly larger than females.",
+        speciesCount: "37 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have excellent hearing and can hear a mouse squeak from 100 feet away."
+    }
+    animals.push(["Fox", fox]);
+
+    var sloth = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 8-19 pounds.",
+        geography: "They are found in Central and South America.",
+        biome: "They live in tropical rainforests.",
+        color: "They are typically brown or gray.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "6 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They spend most of their lives hanging upside down in trees."
+    }
+    animals.push(["Sloth", sloth]);
+
+    var jellyfish = {
+        class: "They are cnidarians.",
+        weight: "Weight varies greatly depending on the species.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments from shallow waters to deep sea.",
+        color: "They can be transparent or various colors like blue, pink, or red.",
+        lifespan: "They live for a few hours to several months depending on the species.",
+        diet: "They are carnivores.",
+        dimorphism: "Males and females are similar in appearance.",
+        speciesCount: "Over 2,000 species are currently recognized.",
+        legsNum: "They have no legs.",
+        funFact: "Some species are bioluminescent and can produce light."
+    }
+    animals.push(["Jellyfish", jellyfish]);
+
+    var snail = {
+        class: "They are mollusks.",
+        weight: "Weight varies greatly depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including forests, grasslands, and freshwater.",
+        color: "They can be brown, gray, white, or colorful.",
+        lifespan: "They live for 2-5 years in the wild.",
+        diet: "They are herbivores.",
+        dimorphism: "Males and females are similar in appearance.",
+        speciesCount: "Over 60,000 species are currently recognized.",
+        legsNum: "They have no legs but a muscular foot for movement.",
+        funFact: "They have a radula, a tongue-like organ with thousands of tiny teeth."
+    }
+    animals.push(["Snail", snail]);
+
+    var worm = {
+        class: "They are invertebrates.",
+        weight: "Weight varies greatly depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in various environments including soil, freshwater, and marine habitats.",
+        color: "They can be brown, red, or pink.",
+        lifespan: "They live for a few months to several years depending on the species.",
+        diet: "They are detritivores.",
+        dimorphism: "Males and females are similar in appearance.",
+        speciesCount: "Over 6,000 species are currently recognized.",
+        legsNum: "They have no legs.",
+        funFact: "They can regenerate lost segments of their bodies."
+    }
+    animals.push(["Worm", worm]);
+
+    var orca = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 8,000-12,000 pounds.",
+        geography: "They are found in oceans worldwide.",
+        biome: "They live in various marine environments from polar regions to tropical seas.",
+        color: "They are typically black and white.",
+        lifespan: "They live for 30-50 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females and have taller dorsal fins.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have no legs and a streamlined body for swimming.",
+        funFact: "They are highly intelligent and often hunt in pods."
+    }
+    animals.push(["Orca", orca]);
+
+    var chameleon = {
+        class: "They are reptiles.",
+        weight: "Adults weigh between 0.5-10 ounces depending on the species.",
+        geography: "They are found in Africa, Asia, and Europe.",
+        biome: "They live in forests, deserts, and savannas.",
+        color: "They can change color to blend into their surroundings.",
+        lifespan: "They live for 1-10 years depending on the species.",
+        diet: "They are insectivores.",
+        dimorphism: "Males are larger and more colorful than females.",
+        speciesCount: "Around 200 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "Their eyes can move independently, allowing them to see in two different directions simultaneously."
+    }
+    animals.push(["Chameleon", chameleon]);
+
+    var skunk = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 3-12 pounds.",
+        geography: "They are found in North and South America.",
+        biome: "They live in forests, grasslands, and urban areas.",
+        color: "They are typically black with white stripes or spots.",
+        lifespan: "They live for 2-4 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "12 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They can spray a strong-smelling liquid from their anal glands as a defense mechanism."
+    }
+    animals.push(["Skunk", skunk]);
+
+    var raccoon = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 10-30 pounds.",
+        geography: "They are found in North and South America, Europe, and Japan.",
+        biome: "They live in forests, wetlands, and urban areas.",
+        color: "They are typically gray with a distinctive black 'mask' around their eyes.",
+        lifespan: "They live for 2-3 years in the wild.",
+        diet: "They are omnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have highly sensitive front paws that act like human hands, enabling them to manipulate objects."
+    }
+    animals.push(["Raccoon", raccoon]);
+
+    var alligator = {
+        class: "They are reptiles.",
+        weight: "Adults weigh between 800-1,000 pounds.",
+        geography: "They are found in the southeastern United States and China.",
+        biome: "They live in swamps, marshes, and rivers.",
+        color: "They are typically dark green or black.",
+        lifespan: "They live for 35-50 years in the wild.",
+        diet: "They are carnivores.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "2 species are currently recognized.",
+        legsNum: "They have 4 legs and a powerful tail for swimming.",
+        funFact: "They have a 'sit-and-wait' hunting strategy, where they wait patiently for prey to come near."
+    }
+    animals.push(["Alligator", alligator]);
+
+    var crane = {
+        class: "They are birds.",
+        weight: "Adults weigh between 5-25 pounds depending on the species.",
+        geography: "They are found on all continents except Antarctica.",
+        biome: "They live in wetlands, grasslands, and forests.",
+        color: "They are typically gray or white with long legs and necks.",
+        lifespan: "They live for 20-30 years in the wild.",
+        diet: "They are omnivores, eating insects, small mammals, and plants.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "15 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They perform elaborate courtship dances that involve jumping, wing-spread displays, and bowing."
+    }
+    animals.push(["Crane", crane]);
+
+    var hummingbird = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.07-0.7 ounces depending on the species.",
+        geography: "They are found in the Americas.",
+        biome: "They live in forests, gardens, and meadows.",
+        color: "They are typically bright and iridescent, with colors like green, red, and blue.",
+        lifespan: "They live for 3-5 years in the wild.",
+        diet: "They are omnivores, feeding on nectar, insects, and spiders.",
+        dimorphism: "Males are usually more brightly colored than females.",
+        speciesCount: "Over 300 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are the only birds that can fly backward and upside down."
+    }
+    animals.push(["Hummingbird", hummingbird]);
+
+    var toucan = {
+        class: "They are birds.",
+        weight: "Adults weigh between 1-1.5 pounds.",
+        geography: "They are found in Central and South America.",
+        biome: "They live in tropical forests.",
+        color: "They are typically black with bright markings and large colorful bills.",
+        lifespan: "They live for 15-20 years in the wild.",
+        diet: "They are omnivores, eating fruits, insects, and small reptiles.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "About 40 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "Their large bills are lightweight but strong, allowing them to reach fruit on thin branches."
+    }
+    animals.push(["Toucan", toucan]);
+
+    var blueJay = {
+        class: "They are birds.",
+        weight: "Adults weigh between 2.5-3.5 ounces.",
+        geography: "They are found in North America.",
+        biome: "They live in forests and urban areas.",
+        color: "They are typically blue with white underparts and black markings.",
+        lifespan: "They live for 7-8 years in the wild.",
+        diet: "They are omnivores, eating insects, seeds, and nuts.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are highly intelligent and can mimic the calls of hawks to scare other birds away from food."
+    }
+    animals.push(["Blue Jay", blueJay]);
+
+    var woodpecker = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.7-0.9 pounds.",
+        geography: "They are found in forests worldwide.",
+        biome: "They live in trees and forests.",
+        color: "They are typically black and white with some species having red markings on their heads.",
+        lifespan: "They live for 4-12 years in the wild depending on the species.",
+        diet: "They are omnivores, eating insects, seeds, and sap from trees.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "Over 200 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "Their tongues can extend up to four inches beyond their beaks to extract insects from crevices."
+    }
+    animals.push(["Woodpecker", woodpecker]);
+
+    var crow = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.7-1.4 pounds.",
+        geography: "They are found worldwide.",
+        biome: "They live in forests, cities, and agricultural areas.",
+        color: "They are typically black with glossy feathers.",
+        lifespan: "They live for 7-8 years in the wild.",
+        diet: "They are omnivores, eating insects, fruits, seeds, and small animals.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "40 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are known for their intelligence and ability to use tools."
+    }
+    animals.push(["Crow", crow]);
+
+    var raven = {
+        class: "They are birds.",
+        weight: "Adults weigh between 1.5-4.5 pounds.",
+        geography: "They are found in North America, Europe, Asia, and North Africa.",
+        biome: "They live in forests, mountains, and tundra.",
+        color: "They are typically black with a thick bill and shaggy throat feathers.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are omnivores, eating insects, small mammals, seeds, and carrion.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "8 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are known for their intelligence and adaptability, often forming complex social structures."
+    }
+    animals.push(["Raven", raven]);
+
+    var peacock = {
+        class: "They are birds.",
+        weight: "Adults weigh between 8-13 pounds.",
+        geography: "They are native to India and Sri Lanka but have been introduced to many other parts of the world.",
+        biome: "They live in forests, savannas, and cultivated lands.",
+        color: "They have colorful plumage with iridescent blues and greens.",
+        lifespan: "They live for 10-20 years in the wild.",
+        diet: "They are omnivores, feeding on insects, plants, and small reptiles.",
+        dimorphism: "Males are larger and have more elaborate plumage than females.",
+        speciesCount: "3 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "Their colorful tail feathers, or trains, can reach up to 6 feet in length."
+    }
+    animals.push(["Peacock", peacock]);
+
+    var duck = {
+        class: "They are birds.",
+        weight: "Adults weigh between 1-5 pounds depending on the species.",
+        geography: "They are found worldwide.",
+        biome: "They live in freshwater lakes, rivers, marshes, and coastal waters.",
+        color: "They have varied plumage colors including brown, white, and green.",
+        lifespan: "They live for 2-12 years depending on the species.",
+        diet: "They are omnivores, eating aquatic plants, insects, and small fish.",
+        dimorphism: "Males are usually more brightly colored than females.",
+        speciesCount: "Over 120 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They have waterproof feathers and specialized bills for filter-feeding in water."
+    }
+    animals.push(["Duck", duck]);
+
+    var human = {
+        class: "They are mammals.",
+        weight: "Adults vary widely in weight depending on age, gender, and health.",
+        geography: "They are found on every continent on Earth.",
+        biome: "They inhabit diverse environments including cities, forests, deserts, and polar regions.",
+        color: "They have varied skin tones influenced by genetics and sun exposure.",
+        lifespan: "Average lifespan varies globally, with modern humans living up to 70-90 years or more.",
+        diet: "They are omnivores, consuming a wide range of plant and animal foods.",
+        dimorphism: "Males are typically larger and more muscular than females, with some secondary sexual characteristics.",
+        speciesCount: "1 species is currently recognized, Homo sapiens.",
+        legsNum: "They have 2 legs.",
+        funFact: "Humans have developed complex languages, societies, and technologies, distinguishing them from other species."
+    }
+    animals.push(["Human", human]);
+
+    var bobcat = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 15-35 pounds.",
+        geography: "They are found in North America.",
+        biome: "They live in forests, mountains, and deserts.",
+        color: "They are typically brown or gray with black spots and stripes.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are carnivores, feeding on small mammals, birds, and reptiles.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "1 species is currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are solitary and territorial animals, marking their territories with urine and claw marks."
+    }
+    animals.push(["Bobcat", bobcat]);
+
+    var eel = {
+        class: "They are fish.",
+        weight: "Adults weigh between 0.5-132 pounds depending on the species.",
+        geography: "They are found in oceans and freshwater rivers worldwide.",
+        biome: "They live in various marine and freshwater environments.",
+        color: "They are typically dark gray or brown.",
+        lifespan: "They live for 10-50 years depending on the species.",
+        diet: "They are carnivores, feeding on fish, crustaceans, and small invertebrates.",
+        dimorphism: "Males and females are similar in appearance.",
+        speciesCount: "Over 800 species are currently recognized.",
+        legsNum: "They have no legs, but some species have fins modified into appendages.",
+        funFact: "They have a complex life cycle that often involves migration between freshwater and saltwater habitats."
+    }
+    animals.push(["Eel", eel]);
+
+    var anteater = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 60-140 pounds depending on the species.",
+        geography: "They are found in Central and South America.",
+        biome: "They live in tropical and subtropical forests.",
+        color: "They are typically gray or brown with long snouts and tongues.",
+        lifespan: "They live for 14-16 years in the wild.",
+        diet: "They are insectivores, feeding primarily on ants and termites.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "4 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have specialized tongues that can extend more than 2 feet to capture insects."
+    }
+    animals.push(["Anteater", anteater]);
+
+    var pigeon = {
+        class: "They are birds.",
+        weight: "Adults weigh between 0.5-0.9 pounds.",
+        geography: "They are found worldwide, especially in urban areas.",
+        biome: "They live in cities, towns, and farmlands.",
+        color: "They are typically gray with iridescent feathers on the neck.",
+        lifespan: "They live for 3-5 years in the wild.",
+        diet: "They are omnivores, eating seeds, grains, and insects.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "Over 300 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are highly adaptive to urban environments and have been domesticated for thousands of years."
+    }
+    animals.push(["Pigeon", pigeon]);
+
+    var goose = {
+        class: "They are birds.",
+        weight: "Adults weigh between 5-20 pounds depending on the species.",
+        geography: "They are found worldwide, especially in temperate and polar regions.",
+        biome: "They live in wetlands, lakes, and grasslands.",
+        color: "They are typically gray or brown with white markings.",
+        lifespan: "They live for 10-25 years in the wild.",
+        diet: "They are herbivores, eating grasses, seeds, and aquatic plants.",
+        dimorphism: "Males and females are similar in size and coloration.",
+        speciesCount: "About 29 species are currently recognized.",
+        legsNum: "They have 2 legs.",
+        funFact: "They are known for their loud honking calls and V-shaped flight formations during migration."
+    }
+    animals.push(["Goose", goose]);
+
+    var mosquito = {
+        class: "They are insects.",
+        weight: "Adults weigh a fraction of an ounce.",
+        geography: "They are found worldwide, except in Antarctica.",
+        biome: "They live in diverse habitats ranging from tropical rainforests to temperate regions.",
+        color: "They are typically gray or brown.",
+        lifespan: "They live for 2 weeks to 6 months depending on the species.",
+        diet: "Females are hematophagous (feeding on blood); males feed on nectar.",
+        dimorphism: "Females are larger and have mouthparts adapted for piercing skin and sucking blood.",
+        speciesCount: "Over 3,500 species are currently recognized.",
+        legsNum: "They have 6 legs.",
+        funFact: "They are considered one of the deadliest animals to humans due to their role in transmitting diseases like malaria and Zika virus."
+    }
+    animals.push(["Mosquito", mosquito]);
+
+    var beaver = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 35-65 pounds.",
+        geography: "They are found in North America, Europe, and Asia.",
+        biome: "They live in freshwater rivers, streams, and lakes.",
+        color: "They are typically dark brown with a broad, flat tail.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are herbivores, feeding on bark, leaves, and aquatic plants.",
+        dimorphism: "Males and females are similar in size.",
+        speciesCount: "2 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They are known for their ability to construct dams and lodges using branches, mud, and stones."
+    }
+    animals.push(["Beaver", beaver]);
+
+    var otter = {
+        class: "They are mammals.",
+        weight: "Adults weigh between 10-100 pounds depending on the species.",
+        geography: "They are found in North America, Europe, Asia, and Africa.",
+        biome: "They live in rivers, lakes, and coastal waters.",
+        color: "They are typically brown with a streamlined body and webbed feet.",
+        lifespan: "They live for 10-15 years in the wild.",
+        diet: "They are carnivores, feeding on fish, mollusks, and small mammals.",
+        dimorphism: "Males are larger than females.",
+        speciesCount: "13 species are currently recognized.",
+        legsNum: "They have 4 legs.",
+        funFact: "They have dense fur that traps air for insulation, allowing them to stay warm in cold water."
+    }
+    animals.push(["Otter", otter]);
+
+
+
+
 
 
 
@@ -89,21 +1398,28 @@
     hints.push(["legsNum", "How Many Legs Does it Have?"]);
     hints.push(["funFact", "Give Me a Fun Fact About This Animal"]);
     hints = hints.reverse();
+    
 
+    var randomAniNum = Math.floor(Math.random() * animals.length);
+
+    var currAnimal = animals[randomAniNum];
     for (let hintNum = 0; hintNum < hints.length; hintNum++) {
-        hints[hintNum][2] = tiger[hints[hintNum][0]];
+        hints[hintNum][2] = currAnimal[hints[hintNum][0]];
     }
 
     var button = document.getElementById("guessButton");
 
 
     function checkAnswer() {
-        var currSolution = "Tiger";
+
+        var currSolution = String(currAnimal[0]);
+        currAnimalInfo = currAnimal[1];
         var answer = (document.getElementById("currGuess")).value;
 
         if (answer.toUpperCase() == currSolution.toUpperCase()) {
             alert("You Win!!!!");
         } else {
+            alert("Wrong");
             if (firstGuess == 0) {
                 firstGuess = 1;
                 var pickOption = document.createElement("p");
@@ -140,7 +1456,7 @@
            
                 var newInfo = document.createElement("p");
                 newInfo.classList.add("answer");
-                newInfo.innerHTML = questions[2];
+                newInfo.innerHTML = currAnimalInfo[questions[0]];
                 document.body.appendChild(newInfo);
 
                 if (hints.length > 0) {
