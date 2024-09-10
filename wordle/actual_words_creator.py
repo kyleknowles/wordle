@@ -8,7 +8,23 @@ rough_words_array = rf['word'].to_numpy()
 
 length = len(rough_words_array)
 
+def anal_word(word):
+    for i in range(len(word)):
+        let = str(word[i])
+        if ((ord(let) < 97) | (ord(let) > 122)):
+            print("Killed " + word)
+            return False
+    print("Survived " + word)
+    return True
 
+rough_words_array = [word for word in rough_words_array if (anal_word(str(word)))]
+
+final_words_creator_df = pd.DataFrame({"word": rough_words_array})
+
+print(rough_words_array)
+final_words_creator_df.to_csv('wordle/all_valid_words.csv', index=False)
+
+'''
 def analyze_word(index, rough_words_array, length, old_length, error_words):
     if ((str(type(rough_words_array[index])) != "<class 'str'>")):
         error_words.append(str(rough_words_array[index]))
@@ -26,8 +42,6 @@ def analyze_word(index, rough_words_array, length, old_length, error_words):
     index = index + 1 
     return [rough_words_array, index, length, error_words]
     
-
-
 def analyze_word_list(rough_words_array, length):
     error_words = []
     new_length = length
@@ -43,14 +57,9 @@ def analyze_word_list(rough_words_array, length):
     print(error_words)
     return rough_words_array
 
-
-
 rough_words_array = analyze_word_list(rough_words_array, length)
+'''
 
-final_words_creator_df = pd.DataFrame({"word": rough_words_array})
-
-print(rough_words_array)
-final_words_creator_df.to_csv('wordle/all_valid_words.csv', index=False)
 
 
 
