@@ -7,38 +7,23 @@ word_array = spelling_df['word'].to_numpy()
 
 middle_char = str(input("Middle Char: "))
 other_chars = str(input("Other Chars: "))
-
+print("Starting Length: " + str(len(word_array)))
 word_array = [word for word in word_array if middle_char in str(word)]
-
+print("After Middle Length: " + str(len(word_array)))
 word_array = [word for word in word_array if len(str(word)) > 3]
    
+print("After Small Words Length: " + str(len(word_array)))
 
-
-def analyze_word(word_array, index, length):
-    for let in word_array[index]:
+def anal_word(word, other_chars):
+    for i in range(len(word)):
+        let = str(word[i])
         if ((let not in (letter for letter in other_chars)) & (let != middle_char)):
-            word_array = np.delete(word_array, index)
-            length = length - 1
-            return [word_array, index, length]
-        
-    index = index + 1
-    return [word_array, index, length]    
+            return False
+    return True
 
-initial_length = len(word_array)
-total_length = 0
-index = 0
-length = len(word_array)
-while (index < length):
-    new_array = analyze_word(word_array, index, length)
-    word_array = new_array[0]        
-    index = new_array[1]
-    length = new_array[2]
+word_array = [word for word in word_array if (anal_word(str(word), other_chars))]
 
-    if (total_length % (round(initial_length, -4)/100) == 0):
-        print(str(round(total_length/(round(initial_length,-4))*100,1)) + "% Complete")
-
-    total_length = total_length + 1
-    
+print("Valid Words Length: " + str(len(word_array)))
 
 
 word_array = sorted(word_array, key=len, reverse=True)
@@ -48,14 +33,27 @@ df = pd.read_csv('wordle/unigram_freq.csv')
 
 valid_array = df['word'].to_numpy()
 
+
 word_array = [word for word in word_array if word in valid_array]
 
+bad_array = []
 
 for word in word_array:
-    
+    result = df[df['word'] == word]
+    value = int(result['count'].values[0])
+    if (value < 0):
+        bad_array.append(word)
+    else:
+        print(str(word) + ", " + str(result['count'].values[0]))
+
+worst_array = [word for word in old_array if word not in word_array]
+
+print()
+print("Possibly:")
+for word in bad_array:
     print(word)
 
-next_array = [word for word in old_array if word not in word_array]
-
-for word in next_array:
+print()
+print("Probably Not:")
+for word in worst_array:
     print(word)

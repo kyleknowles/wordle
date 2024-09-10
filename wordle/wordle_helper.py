@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+
+# Abandoned bad data
 df = pd.read_csv('wordle/valid_freq.csv')
 five_letter_array = df['word'].to_numpy()
 
@@ -9,6 +11,7 @@ valid_solutions = df_valid_solutions['word'].to_numpy()
 
 df_valid_guesses = pd.read_csv('wordle/valid_guesses.csv')
 valid_guesses = df_valid_guesses['word'].to_numpy()
+    
 
 
 def wordle_solver(five_letter_array):
@@ -16,11 +19,29 @@ def wordle_solver(five_letter_array):
     for guess in range(5):
         word = input("Choose a word: ").lower()
 
+        word_num = 20
         while (len(word) != 5) | ((word not in valid_guesses) & (word not in valid_solutions)):
-            if (word not in valid_guesses):
-                print("Not a valid guess")
-            if (len(word) != 5):
-                print("Word must be of length 5")
+            if (word.isdigit() & (word_length != len(five_letter_array))):
+
+                word_length = int(word) + word_num
+
+                if (len(five_letter_array) < word_length+word_num):
+                    word_length = len(five_letter_array)
+
+                for common_word in range (word_num, word_length):
+                    print(str(common_word+1) + ". " + five_letter_array[common_word])
+        
+                if (len(five_letter_array) > word_length):
+                    print("... + " + str(len(five_letter_array)-(word_length)) + " more")
+
+                word_num = word_length
+
+            else:
+                if (word not in valid_guesses):
+                    print("Not a valid guess")
+                if (len(word) != 5):
+                    print("Word must be of length 5")
+
             word = input("Choose a word: ").lower()
 
 
@@ -73,6 +94,8 @@ def wordle_solver(five_letter_array):
         if (len(five_letter_array) > 20):
             print("... + " + str(len(five_letter_array)-20) + " more")
         print()
+
+        
 
 wordle_solver(five_letter_array)
 
