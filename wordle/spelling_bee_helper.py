@@ -42,9 +42,9 @@ for word in word_array:
     result = df[df['word'] == word]
     value = int(result['count'].values[0])
     if (value < 0):
-        bad_array.append(word)
+        bad_array.append(word + ", " + str(value))
     else:
-        print(str(word) + ", " + str(result['count'].values[0]))
+        print(str(word) + ", " + str(value))
 
 worst_array = [word for word in old_array if word not in word_array]
 

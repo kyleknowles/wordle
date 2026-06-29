@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
 
+    # why is this here?
+# Abandoned bad data 
 
-# Abandoned bad data
 df = pd.read_csv('wordle/valid_freq.csv')
 five_letter_array = df['word'].to_numpy()
+
 
 df_valid_solutions = pd.read_csv('wordle/valid_solutions.csv')
 valid_solutions = df_valid_solutions['word'].to_numpy()
@@ -18,8 +20,9 @@ def wordle_solver(five_letter_array):
     print("Welcome to Wordle Helper")
     for guess in range(5):
         word = input("Choose a word: ").lower()
-
+      
         word_num = 20
+        word_length = 0
         while (len(word) != 5) | ((word not in valid_guesses) & (word not in valid_solutions)):
             if (word.isdigit() & (word_length != len(five_letter_array))):
 
