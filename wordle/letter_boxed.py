@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-df = pd.read_csv("wordle/all_valid_words.csv")
+df = pd.read_csv("wordle/avcsv")
 
 word_array = df['word'].to_numpy()
 #other_array = other_df['word'].to_numpy()
@@ -39,8 +39,6 @@ def valid_word(word):
 
 
 
-
-
 word_array = [word for word in word_array if len(str(word)) > 2]
 word_list = [word for word in word_array if valid_word(str(word))]
 
@@ -57,13 +55,7 @@ def unique_letters(word):
 
 
 
-
-
-
-
 print()
-
-
 
 
 new_list = word_list
@@ -72,31 +64,50 @@ wordCount = 0
 
 new_list.sort(key=unique_letters, reverse=True)
 
+total_word_list = []
 
-for word in new_list[:10]:
+def findList(letters_left, new_word, word_list, wordlist):
+       word_count = 0
+       while (len(letters_left) > 0):
+            word_count = word_count + 1
+
+            last_letter = new_word[-1]
+            new_list = [word for word in word_list if word[0] == last_letter]
+
+            new_list.sort(key=unique_letters, reverse=True)
+            
+            if (len(new_list) == 0):
+                return wordlist
+
+            
+            
+            new_word = new_word + new_list[0]
+
+            wordlist.append(new_list[0])
+            letters_left = str(set(letters_left) - set(new_word)).replace(" ","").replace("'","").replace(",","").replace("{","").replace("}","").replace("set()","")
+            if (word_count > 5):
+                return (wordlist)
+
+       total_word_list.append(wordlist)
+       return (wordlist)
+
+for word in new_list:
+
     wordlist = []
     new_word = new_word + word
 
     wordlist.append(word)
 
-    while (len(letters_left) > 0):
-
-
-        last_letter = new_word[-1]
-        new_list = [word for word in word_list if word[0] == last_letter]
-
-        new_list.sort(key=unique_letters, reverse=True)
-        new_word = new_word + new_list[0]
-
-        wordlist.append(new_list[0])
-        letters_left = str(set(letters_left) - set(new_word)).replace(" ","").replace("'","").replace(",","").replace("{","").replace("}","").replace("set()","")
-
-
-    printWordList(wordlist)
+    wordlist = findList(letters_left, new_word, word_list, wordlist)
+    
     new_list = word_list
     wordlist = []
     letters_left = allsides
     new_word = ""
 
 
+# print all paths in order of size
+total_word_list = sorted(total_word_list, key=len)
+for list in total_word_list:
+    printWordList(list)
 
