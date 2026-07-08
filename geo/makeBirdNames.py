@@ -31,7 +31,7 @@ while (speciesNum <= len(gdf)):
     speciesMaxNum = speciesMinNum + step_count
 
     if (len(gdf) <= speciesMaxNum):
-        speciesMaxNum = len(gdf) - 1
+        speciesMaxNum = len(gdf)
 
 
     vernacularNamesList = []
