@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 from pygbif import species
 from pathlib import Path
 
-
+folder = "birds"
 file = "birds.gpkg"
-filename = Path(file)
+filename = Path(file).stem
 
 gdf = gpd.read_file(file)
 
 
-step_count = 10
+step_count = 100
 
 
 
@@ -44,4 +44,4 @@ while (speciesNum <= len(gdf)):
 
     curr_gdf["Vernacular Name"] = vernacularNamesList
 
-    curr_gdf.to_csv('geo/birds/'+str(speciesMinNum+1)+"-"+str(speciesMaxNum))
+    curr_gdf.to_csv('geo/'+folder+'/'+filename+"_"+str(speciesMinNum+1)+"-"+str(speciesMaxNum)+".csv")
