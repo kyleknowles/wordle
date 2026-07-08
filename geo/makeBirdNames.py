@@ -7,8 +7,9 @@ from pathlib import Path
 import csv
 
 folder = "birds"
-file = "birds.gpkg"
-filename = Path(file).stem
+file = "birds2.gpkg"
+#filename = Path(file).stem
+fileheader = "birds"
 
 gdf = gpd.read_file(file)
 
@@ -18,7 +19,7 @@ step_count = 100
 
 
 
-speciesNum = 4601
+speciesNum = 1
 
 
 
@@ -28,6 +29,9 @@ while (speciesNum <= len(gdf)):
     speciesMinNum = speciesNum - 1
 
     speciesMaxNum = speciesMinNum + step_count
+
+    if (len(gdf) <= speciesMaxNum):
+        speciesMaxNum = len(gdf) + 1
 
 
     vernacularNamesList = []
@@ -51,4 +55,4 @@ while (speciesNum <= len(gdf)):
 
     curr_gdf["Vernacular Name"] = vernacularNamesList
 
-    curr_gdf.to_csv('geo/'+folder+'/'+filename+"_"+str(speciesMinNum+1)+"-"+str(speciesMaxNum)+".csv")
+    curr_gdf.to_csv('geo/'+folder+'/'+fileheader+"_"+str(speciesMinNum+1+5000)+"-"+str(speciesMaxNum+5000)+".csv")
