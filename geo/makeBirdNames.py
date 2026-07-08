@@ -17,7 +17,7 @@ step_count = 100
 
 
 
-speciesNum = 1
+speciesNum = 4600
 
 
 
@@ -25,6 +25,7 @@ speciesNum = 1
 
 while (speciesNum <= len(gdf)):
     speciesMinNum = speciesNum - 1
+
     speciesMaxNum = speciesMinNum + step_count
 
 
