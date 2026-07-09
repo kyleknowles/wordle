@@ -6,22 +6,16 @@ from pygbif import species
 from pathlib import Path
 import csv
 
-folder = "birds"
-file = "birds2.gpkg"
+folder = "fishes"
+fileheader = "fishes"
+file = "fishes.gpkg"
 #filename = Path(file).stem
-fileheader = "birds"
 
-gdf = gpd.read_file(file)
-
-
+speciesNum = 1
 step_count = 100
 
 
-
-
-speciesNum = 1501
-
-
+gdf = gpd.read_file(file)
 
 
 
@@ -55,4 +49,4 @@ while (speciesNum <= len(gdf)):
 
     curr_gdf["Vernacular Name"] = vernacularNamesList
 
-    curr_gdf.to_csv('geo/'+folder+'/'+fileheader+"_"+str(speciesMinNum+1+5000)+"-"+str(speciesMaxNum+5000)+".csv")
+    curr_gdf.to_csv('geo/animals/'+folder+'/'+fileheader+"_"+str(speciesMinNum+1)+"-"+str(speciesMaxNum)+".csv")
