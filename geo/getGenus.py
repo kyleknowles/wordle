@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 
 
-foldername = "mammals"
+foldername = "reptiles"
 
 animal_list = []
 
