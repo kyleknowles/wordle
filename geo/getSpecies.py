@@ -13,7 +13,9 @@ path = Path("animals/" + foldername)
 ani_df = pd.read_csv("ani.csv")
 ani_list = ani_df["Animal"].to_list()
 
+total_animal_list = []
 
+total_df = pd.DataFrame()
 
 for animal in ani_list:
 
@@ -26,6 +28,8 @@ for animal in ani_list:
     for file in path.iterdir():
 
         df = pd.read_csv(file)
+
+        total_df = pd.concat([total_df, df])
         curr_list = df["Vernacular Name"].to_list()
 
         #species_list_c = [animal.capitalize() for animal in curr_list if curr_genus.upper() in str(animal).upper()] # genus in name
@@ -47,6 +51,8 @@ for animal in ani_list:
     
     print(animal_list_ae)
     print()
+
+    total_animal_list = total_animal_list + animal_list_ae
     #print(animal_list_a_e)
     #print()
     #print()
@@ -73,3 +79,10 @@ for animal in ani_list:
         print(list(set(animal_list_c) - set(animal_list_ae)))
         print()
     '''
+
+
+
+print(len(total_animal_list))
+
+total_df = total_df[total_df["Vernacular Name"].isin(total_animal_list)]
+print(total_df)
