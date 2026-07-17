@@ -4,13 +4,12 @@ import pandas as pd
 from pathlib import Path
 import re
 
-foldername = "mammals"
-
+foldername = "amphibians"
 
 path = Path("animals/" + foldername)
 
 
-ani_df = pd.read_csv("ani.csv")
+ani_df = pd.read_csv("KeyGenus/" + foldername + ".csv")
 ani_list = ani_df["Animal"].to_list()
 
 total_animal_list = []
