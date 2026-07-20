@@ -1,0 +1,60 @@
+Genus,Order,Weight (kg),Color,Lifespan (years),Diet,Habitat,Conservation Status,Social Structure
+Anteater,Mammal,22-41,White/Brown,15-20,Insectivore,Grasslands/Forests,Least Concern,Solitary
+Bat,Mammal,0.05,Brown,12-8,Carnivore,Forests/Caves,Least Concern,Colony-based
+Bear,Mammal,27-80,Black/Tan/White/Brown,10-30,Omnivore/Carnivore,Arctic/Forests/Mountains/Tropical Forests,Vulnerable/Least Concern,Solitary
+Bison,Mammal,"1,000-318",Brown,15-20,Herbivore,Grasslands/Plains,Near Threatened,Group-based
+Boar,Mammal,120-30,Black/Brown,10-25,Omnivore,Grasslands/Forests,Least Concern,Group-based
+Bonobo,Mammal,30-40,Black,40-60,Omnivore,Rainforests,Endangered,Social groups
+Buffalo,Mammal,1200-300,Dark Gray,20-25,Herbivore,Grasslands/Wetlands,Least Concern,Group-based
+Capybara,Mammal,35-66,Brown,10-8,Herbivore,Grasslands/Swamps,Least Concern,Group-based
+Cheetah,Mammal,20-72,Tan with Black Spots,10-12,Carnivore,Grasslands/Savannas,Vulnerable,Solitary
+Chimpanzee,Mammal,26-70,Black,40-50,Omnivore,Grasslands/Rainforests,Endangered,Social groups
+Dolphin,Mammal,100-650,Yellow/White/Gray/Grey,20-50,Carnivore,Oceans/Coastal Areas,Least Concern,Group-based/Social pods
+Elephant,Mammal,2000-6000,Grey,60-80,Herbivore,Grasslands/Savannah/Forest/Forests,Vulnerable/Endangered,Herd-based
+Fox,Mammal,0.8-9,Yellowish-gray/Gray/White/Brown/Reddish-brown/Cream,10-8,Omnivore/Herbivore,Grasslands/Forests/Sahara Desert/Tundra,Least Concern,Group-based/Solitary
+Gorilla,Mammal,181-73,Brown/Black,30-50,Herbivore,Mountains/Rainforests,Critically Endangered/Endangered,Group-based/Social groups
+Hedgehog,Mammal,0.6-1.2,Spiny/Brown,2-5,Omnivore,Gardens/Grasslands,Least Concern,Solitary
+Hippopotamus,Mammal,1300-3200,Grey,40-50,Herbivore,Lakes/Rivers,Vulnerable,Group-based
+Horse,Mammal,1000-380,Various,25-30,Herbivore,Middle East/North Africa,Not Applicable,Herd-based
+Kangaroo,Mammal,18-95,Red/Brown,15-23,Herbivore,Grasslands/Rainforests,Endangered/Least Concern,Group-based/Solitary
+Lemur,Mammal,0.6-4.5,Varies/Various,15-25,Omnivore/Herbivore,Forests/Rainforests/Madagascar,Vulnerable/Critically Endangered,Group-based
+Leopard,Mammal,22-75,Grayish-yellow/Black,10-15,Carnivore,Steppes/Mountains,Vulnerable,Solitary
+Lion,Mammal,120-250,Tan,10-14,Carnivore,Grasslands/Savannas,Vulnerable,Group-based
+Lynx,Mammal,14-9,Yellowish-brown,10-13,Carnivore,Mediterranean Scrublands,Endangered,Solitary
+Meerkat,Mammal,0.6-1,Tan/Brown,12-14,Omnivore/Insectivore,Arid regions,Least Concern,Social groups
+Mole,Mammal,0.06,Pink/Black,4,Insectivore,Wetlands/Forests,Least Concern,Solitary
+Monkey,Mammal,0.5-9,Black/Yellowish-Orange/Orange/Brown,15-36,Omnivore/Herbivore,Rainforests/Mangroves,Vulnerable/Endangered/Least Concern,Group-based/Social groups
+Orangutan,Mammal,23-82,Reddish-brown/Reddish-Brown,30-50,Omnivore,Rainforests,Critically Endangered,Solitary
+Panda,Mammal,125-70,Reddish-brown/White/Black,12-8,Herbivore,Temperate Broadleaf Forests/Himalayan Foothills,Endangered,Solitary
+Platypus,Mammal,0.7-2.4,Brown,10-17,Insectivore/Carnivore,Eastern Australia,Near Threatened,Solitary
+Rat,Mammal,0.035-80,Wrinkled/Pink/Gray/Brown,2-5,Insectivore/Herbivore,Deserts/Underground Tunnels,Least Concern,Solitary/Eusocial
+Rhinoceros,Mammal,"1,400-950",Brown/Gray/Black,35-50,Herbivore,Grasslands/Forests/Rainforests,Critically Endangered/Near Threatened,Group-based/Solitary
+Seal,Mammal,160-40,Silver/Gray/Brown,14-35,Carnivore,Arctic/Coastal Waters/Atlantic Ocean,Least Concern,Group-based
+Sloth,Mammal,3.6-9,Gray/Brown,10-16,Herbivore,Rainforests,Least Concern,Solitary
+Tiger,Mammal,100-47,Yellow-brown/White/Black/Black Stripes/Orange,10-7,Carnivore,Grasslands/Australia/Rainforests/Mangroves,Critically Endangered/Endangered/Extinct,Solitary
+Walrus,Mammal,1200,Brown,40-50,Carnivore,Arctic/Coastal Areas,Least Concern,Group-based
+Whale,Mammal,200 tons-57000,White/Gray/Blue-grey/Black,45-90,Omnivore/Filter Feeder/Carnivore,Oceans,Vulnerable/Endangered/Least Concern,Solitary
+Wolf,Mammal,20-80,White/Gray/Reddish-Brown,13-8,Omnivore/Carnivore,Grasslands/Forests,Near Threatened/Least Concern,Group-based/Solitary
+Yak,Mammal,1200-500,Black/Brown,20-25,Herbivore,Mountains,Least Concern,Group-based
+Zebra,Mammal,350-900,White/Black,20-30,Herbivore,Grasslands,Endangered/Least Concern,Group-based/Herd-based
+Anaconda,Reptile,97.5,Olive-green,10-15,Carnivore,Swamps/Marshes,Least Concern,Solitary
+Cobra,Reptile,9,Olive-green,20-30,Carnivore,Grasslands/Forests,Vulnerable,Solitary
+Dragon,Reptile,0.5-90,Various/Brown/Green/Grey,10-6,Omnivore/Carnivore,Woodlands/Grasslands/Islands/Deserts/Seaweed Beds,Vulnerable/Not Evaluated/Near Threatened,Solitary
+Gecko,Reptile,250,Various,10-15,Insectivore,Rainforests/Madagascar,Not Evaluated,Solitary
+Lizard,Reptile,0.5-166,Varies/Grey/Brown,10-15,Insectivore/Carnivore/Herbivore,Various/Northern Australia,Varies/Least Concern,Solitary
+Python,Reptile,90,Black/Brown,20-25,Carnivore,Grasslands/Forests,Least Concern,Solitary
+Tortoise,Reptile,417,Grey/Brown,100-150,Herbivore,Galápagos Islands,Vulnerable,Solitary
+Tuatara,Reptile,1.5,Grayish-brown,100,Insectivore/Carnivore,Islands/Coastal Areas,Vulnerable,Solitary
+Turtle,Reptile,16-68,Green/Gray/Greenish-brown/Brown,100-80,Omnivore/Herbivore,Freshwater/Oceans/Coastal Areas,Endangered/Least Concern,Solitary
+Axolotl,Amphibian,300,Various,10-15,Carnivore,Lakes/Canals,Critically Endangered,Solitary
+Frog,Amphibian,0.03-2.4,Various/Green/Red/Transparent,10-5,Insectivore,Rainforests/Amazon Rainforest,Not Evaluated/Near Threatened/Least Concern,Solitary
+Salamander,Amphibian,55-65,Dark Brown/Yellow/Black,10-70,Carnivore,Freshwater/Forests/Caves,Critically Endangered/Near Threatened,Solitary
+Booby,Bird,1.5-3,White/Blue,12-17,Piscivore,Coastal Areas,Least Concern,Group-based
+Eagle,Bird,3-9,Black/White/Brown,20-35,Carnivore,Lakes/Coasts/Forests/Rainforests,Near Threatened/Least Concern,Solitary
+Hummingbird,Bird,2-20,Various,3-5,Insects/Nectar,Americas,Least Concern,Solitary
+Owl,Bird,1.6-3.3,White,10-15,Carnivore,North America/Arctic,Least Concern,Solitary
+Penguin,Bird,1-45,Yellow/White/Black,15-20,Piscivore/Carnivore,Galápagos Islands/Coastal Areas/Antarctic,Endangered/Near Threatened,Colony-based/Solitary
+Puffin,Bird,0.4-620,White/Black,20-25,Piscivore/Carnivore,North Atlantic/Arctic/Coastal Areas,Vulnerable/Least Concern,Colony-based/Social groups
+Vulture,Bird,?,Brown/Black,?,Carnivore,Various,Varies,Social groups
+Eel,Fish,20,Grayish-brown,10-15,Carnivore,Amazon Basin,Least Concern,Solitary
+Shark,Fish,1500-800,White/Gray/Grey/Brown/Metallic Blue/Pinkish-gray/Yellowish,100-70,Filter Feeder/Carnivore,Coral Reefs/Oceans/Deep-sea,Vulnerable/Data Deficient/Endangered,Solitary
