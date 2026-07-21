@@ -16,6 +16,10 @@ var currAnimal = [];
 var currSolution = "";
 var answer = "";
 
+var again = document.createElement("Button");
+var button = document.getElementById("guessButton");
+
+
 fetch("genus_data.csv")
     .then(response => response.text())
     .then(csv => {
@@ -61,19 +65,18 @@ fetch("genus_data.csv")
 
         for (let hintNum = 0; hintNum < hints.length; hintNum++) {
             hints[hintNum][2] = currAnimal[hints[hintNum][0]];
-            console.log(currAnimal[hints[hintNum][0]]);
+            
         }
+        hints.push(["Location", "Where does it Live?", "range_images/" + animal_name + "_range.png"])
 
         console.log(hints)
 
-        var again = document.createElement("Button");
+        
         again.id = "again";        
         again.innerHTML = "Play Again";
         again.onclick = function reload() {
             location.reload();
         };    
-
-        var button = document.getElementById("guessButton");
 
 
         var pickOption = document.createElement("p");    
@@ -146,10 +149,24 @@ fetch("genus_data.csv")
             function removeFunc() {
                 newBox.remove();
                         
-                var newInfo = document.createElement("p");
-                newInfo.classList.add("answer");
-                newInfo.innerHTML = currAnimalInfo[questions[0]];
-                document.body.appendChild(newInfo);
+                if (questions[0] != "Location") {
+                    var newInfo = document.createElement("p");
+                    newInfo.classList.add("answer");
+                    newInfo.innerHTML = currAnimalInfo[questions[0]];
+                    document.body.appendChild(newInfo);
+                } else {
+                    var newImage = document.createElement("img");
+                    newImage.style.display = "block";
+                    newImage.style.marginLeft = "auto";
+                    newImage.style.marginRight = "auto";
+
+                    newImage.src = questions[2];
+                    newImage.alt = "????";
+                    newImage.width = 250;
+                    newImage.height = 200;
+                    document.body.appendChild(newImage);
+                    var newInfo = document.createElement("p");
+                }
                         
                 if (hints.length > 0) {
                     createBox(allBox);  
