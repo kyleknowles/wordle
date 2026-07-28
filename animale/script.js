@@ -48,14 +48,14 @@ fetch("genus_data.csv")
         console.log(animal_name);
         animal_list = data2;
 
-        hints.push(["Order", "What Class of Animal is it?"]);
-        hints.push(["Weight (kg)", "How Much Does an Adult Weigh?"]);
-        hints.push(["Color", "What Color is it?"]);
-        hints.push(["Lifespan (years)", "What is their Average Lifespan?"]);
-        hints.push(["Diet", "What is their Diet?"]);
-        hints.push(["Habitat", "What Biome Does it Live in?"]);
-        hints.push(["Conservation Status", "What is their Conservation Status"]);
-        hints.push(["Social Structure", "What is their Social Structure"]);
+        hints.push(["Order", "What Class of Animal is it?", ""]);
+        hints.push(["Weight (kg)", "How Much Does an Adult Weigh?", " kg"]);
+        hints.push(["Color", "What Color is it?", ""]);
+        hints.push(["Lifespan (years)", "What is their Average Lifespan?", " years"]);
+        hints.push(["Diet", "What is their Diet?", ""]);
+        hints.push(["Habitat", "What Biome Does it Live in?", ""]);
+        hints.push(["Conservation Status", "What is their Conservation Status", ""]);
+        hints.push(["Social Structure", "What is their Social Structure", ""]);
 
         hints = hints.reverse();
 
@@ -64,7 +64,7 @@ fetch("genus_data.csv")
         console.log(currAnimal);
 
         for (let hintNum = 0; hintNum < hints.length; hintNum++) {
-            hints[hintNum][2] = currAnimal[hints[hintNum][0]];
+            hints[hintNum][3] = currAnimal[hints[hintNum][0]];
             
         }
         hints.push(["Location", "Where does it Live?", "range_images/" + animal_name + "_range.png"])
@@ -152,7 +152,7 @@ fetch("genus_data.csv")
                 if (questions[0] != "Location") {
                     var newInfo = document.createElement("p");
                     newInfo.classList.add("answer");
-                    newInfo.innerHTML = currAnimalInfo[questions[0]];
+                    newInfo.innerHTML = currAnimalInfo[questions[0]] + questions[2];
                     document.body.appendChild(newInfo);
                 } else {
                     var newImage = document.createElement("img");
@@ -162,8 +162,8 @@ fetch("genus_data.csv")
 
                     newImage.src = questions[2];
                     newImage.alt = "????";
-                    newImage.width = 250;
-                    newImage.height = 200;
+                    newImage.width = 500;
+                    newImage.height = 400;
                     document.body.appendChild(newImage);
                     var newInfo = document.createElement("p");
                 }
